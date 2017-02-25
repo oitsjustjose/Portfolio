@@ -19,7 +19,8 @@ body {
     padding: 5em 0em;
 }
 
-.bottom {
+
+#footer {
   position: absolute;
   right: 0;
   bottom: 0;

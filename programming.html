@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" href="img/favicon.ico">
+    <title>oitsjustjose: Dev Diary</title>
+    <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic/out/semantic.min.js"></script>
+    <script src="about.js"></script>
+</head>
+
+<body>
+    <!--This is all stuff for the menubar-->
+    <div class="ui blue fixed inverted menu">
+        <div class="ui container">
+            <a href="https://oitsjustjose.github.io/About/" class="header item"><img class="logo" src="img/logo.png">General Info</a>
+            <a href="education.html" class="item">Education</a>
+            <a href="programming.html" class="item">Programming</a>
+            <a href="https://github.com/oitsjustjose/" target="_blank" class="item"><i class="github alternate icon"></i> GitHub</a>
+        </div>
+    </div>
+
+    <!--Actual Site Contents, dependent on the page!-->
+
+    <div class="ui two column stackable grid">
+        <div class="ui main container">
+            <h1>Programming Experience</h1>
+            <div class="ui cards">
+                <!--create-a-thon-->
+                <a class="ui card create-a-thon">
+                    <div class="image">
+                        <img src="img/create-a-thon.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">Create-A-Thon</div>
+                        <span class="meta">Winners of the first-annual programming competition!</span>
+                        <div class="description"></div>
+                    </div>
+                </a>
+
+                <!--fantastic_five-->
+                <a class="ui card fantastic_five">
+                    <div class="image">
+                        <img src="img/fantastic_five.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Software Design Project</div>
+                        <span class="meta">An Almost-Shippable Finished Product!</span>
+                        <div class="description"></div>
+                    </div>
+                </a>
+
+                <!--nissan-->
+                <a class="ui card nissan">
+                    <div class="image">
+                        <img src="img/nissan.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Nissan of Murfreesboro</div>
+                        <span class="meta">Privately Contracted Program</span>
+                        <div class="description"></div>
+                    </div>
+                </a>
+
+                <!--modding-->
+                <a class="ui card modding">
+                    <div class="image">
+                        <img src="img/modding.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Mod Development</div>
+                        <span class="meta">Further than where I started!</span>
+                        <div class="description"></div>
+                    </div>
+                </a>
+
+                <!--Modals for each module!-->
+                <div class="ui modal create-a-thon">
+                    <i class="close icon"></i>
+                    <div class="header">First Annual Create-A-Thon - October 2016</div>
+                    <div class="content">
+                        "CECS Students also took top honors during the app development component of Startup week. InfoSystems and Skuid presented a $10K scholarship to grand prize winners Alay Patel, Jose Stovall, Steven Hullander, and Evan Grayson, who are all juniors in the
+                        Computer Science and Engineering Department. The fifteen teams in the competition were tasked with creating a mobile app that allows consumers to digitally keep track of their physical conditions. The first and second place teams
+                        excelled in creating an inviting and intuitive UX/UI design, but the UTC “Brogrammers” took it a step further by adding a mini-game to their app." ~Holley Beeland
+                        <br><br> This was my first detailed look at HTML, CSS and JavaScript - before this point I only had minor experience, and still only consider myself amateur at best. Regardless, this was a fantastic learning experience and great
+                        practive of my program design skills!
+                        <br><br><a href="https://github.com/oitsjustjose/Brogrammers/"><i class="github icon"></i> App's Repository</a>
+                    </div>
+                </div>
+
+                <div class="ui modal fantastic_five">
+                    <i class="close icon"></i>
+                    <div class="header">Fantastic Five - Spring 2016</div>
+                    <div class="content">
+                        This wasn't my first use of Java's Libraries to produce a desktop program, but this was my first attempt to make a <i>good</i> one! As part of an assigned group, myself and 4 others were instructed to design (using any language)
+                        a Class Registration Program. I feel as though this program was a large accomplishment for us all - it had several productivity-intensive features, such as the ability to print schedules, add and remove users, and more!<br><br>
+                        In the end, I truly feel like we all brought something special to the table. One of the group members taught me about Java Serialization and how wonderful it can be. Meanwhile, I brought about a structure for our window system,
+                        how the window's contents would be managed and placed, as well as how the UI was going to dynamically theme itself based on Operating System.
+                        <br><br><a href="https://github.com/alaypatel030/Fantastic_Five/"><i class="github icon"></i> Program's Repository</a>
+                    </div>
+                </div>
+
+                <div class="ui modal nissan">
+                    <i class="close icon"></i>
+                    <div class="header">Nissan of Murfreesboro - December 2015</div>
+                    <div class="content">
+                        I will not be revealing too much information for the sake of respect to the Nissan dealership which offered me the program contract, but this marks the first time I was <i>ever</i> paid to program! The program was a simple, UI-based
+                        string comparator which allowed a user to select a file, paste a list, and then compare both string collections and output which did not match. While this sounds vague, consider it in the context of comparing incoming vehicles
+                        with current stock.<br><br><i class="github icon"></i>Source Code is Private
+                    </div>
+                </div>
+
+                <div class="ui modal modding">
+                    <i class="close icon"></i>
+                    <div class="header">Modding Minecraft - Current</div>
+                    <div class="content">
+                      This is not only a hobby, but a passion. All of my mods are open-source and licensed under GNU GPL for others to learn from my code, the same way that I learned from others!
+                      <br><br>I enjoy playing games, and writing mods for Minecraft is a great way of practicing programming, debugging, API usage and more. All of my mods depend on the <a href="http://minecraftforge.net">Minecraft Forge API</a>. As a result, I constantly aim to maximize compatibility with up to <i>thousands</i> of other mods, plus for each Minecraft update I must adapt my code to not <i>only</i> Minecraft's codebase changes, but Forge's as well.
+                      <br><br>The result? I feel like my ability to be tossed into any programming environment and survive is much better than most programmers which are still studying in school.
+                      <br><br><a href="https://github.com/oitsjustjose/"><i class="github icon"></i> Home to All My Mods</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="ui inverted vertical segment">
+            <div class="ui center aligned container">
+                <div class="ui horizontal inverted small divided link list">
+                    <a class="item" href="mailto:stovallj1995@gmail.com"><i class="mail icon"></i> Contact</a>
+                    <a class="item" href="http://github.com/oitsjustjose/About"><i class="code icon"></i> Site Source</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
