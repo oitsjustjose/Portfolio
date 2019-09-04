@@ -2,6 +2,7 @@ body {
     background-color: #252525;
     color: #eeeeee;
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 ::selection {
