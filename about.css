@@ -1,33 +1,61 @@
 body {
-    background-color: #FFFFFF;
+    background-color: #252525;
+    color: #eeeeee;
+}
+
+::selection {
+    background-color: #cccccc8a;
+}
+
+.ui.header {
+    color: #eeeeee;
+}
+
+a {
+    color: #7cb342;
+}
+
+a:hover {
+    color: #6e9445
 }
 
 .ui.menu .item img.logo {
     margin-right: 1.5em;
 }
 
-.main.container {
-    margin-top: 3em;
+.ui.text.container {
+    margin-bottom: 10vh;
 }
 
-.wireframe {
-    margin-top: 2em;
+/* Dark mode modals :womk: */
+
+.ui.modal.inverted.transition.visible.active,
+.ui.modal.inverted.transition.animating,
+.ui.modal>.content {
+    background-color: #303030 !important;
+    color: #eeeeee !important;
 }
 
-.ui.footer.segment {
-    margin: 5em 0em 0em;
-    padding: 5em 0em;
+
+
+.ui.modal.inverted>.icon:first-child+* {
+    background-color: #282828 !important;
+    color: #eeeeee !important;
 }
 
-
-#footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
+.ui.inverted.card {
+    color: #eeeeee !important;
+    background-color: #303030 !important;
+    -webkit-box-shadow: 0px 1px 3px 0px #353535, 0px 0px 0px 1px #353535 !important;
+    box-shadow: 0px 1px 3px 0px #353535, 0px 0px 0px 1px #353535 !important;
 }
 
-.ui.bottom.attached.segment ul {
-  text-align: left;
+.ui.cards>.inverted.card>.content>.header,
+.ui.card>.content>.header {
+    color: #eeeeee !important;
+}
+
+.ui.cards>.inverted.card .meta,
+.ui.card .meta {
+    color: #eeeeee !important;
 }

@@ -7,43 +7,50 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="icon" href="../img/favicon.ico">
+    <link rel="icon" href="../Resources/img/favicon.ico">
     <title>oitsjustjose: Dev Diary</title>
-    <link rel="stylesheet" type="text/css" href="../semantic/out/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../Resources/semantic/out/semantic.css">
     <link rel="stylesheet" type="text/css" href="../about.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="../semantic/out/semantic.min.js"></script>
-    <script src="../about.js"></script>
+    <script src="../Resources/semantic/out/semantic.js"></script>
+    <script src="./index.js"></script>
 </head>
 
-<body>
+<body onload="init()">
     <!--This is all stuff for the menubar-->
-    <div class="ui blue fixed inverted menu">
+    <div class="ui inverted small menu">
         <div class="ui container">
-            <a href="../" class="item"><img class="logo" src="../img/logo.png">General Info</a>
+            <a href="../" class="item"><img class="logo" src="../Resources/img/logo.png">General Info</a>
             <a href="../Education" class="item">Education</a>
-            <a href="./" class="header item">Programming</a>
-            <a href="https://github.com/oitsjustjose/" target="_blank" class="item"><i
-                    class="github alternate icon"></i>
-                GitHub</a>
+            <a href="../Programming" class="active olive item">Programming</a>
         </div>
     </div>
 
     <!--Actual Site Contents, dependent on the page!-->
-
-    <div class="ui two column stackable grid">
-        <div class="ui main container">
-            <h1>Programming Experience</h1>
-            <h3>These are only the highlights, check out <a href="https://github.com/oitsjustjose" target="_blank">my
-                    GitHub</a> for more.</h3>
-
-
-            <div class="ui cards">
-                <!-- USIgnite 2019 -->
-                <a class="ui card cuip-2019">
+    <div class="ui container">
+        <h1 class="ui centered header">Programming Experience</h1>
+        <h3 class="ui centered header">These are only the highlights, check out <a
+                href="https://github.com/oitsjustjose" target="_blank">my
+                GitHub</a> for more.</h3>
+        <div class="ui two column stackable grid" style="margin-bottom: 10vh;">
+            <div class="ui centered cards">
+                <a class="ui inverted card cscdc">
                     <div class="image">
-                        <img src="../img/infrastructure.png">
+                        <img src="../Resources/img/cscdc.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">2nd Annual Deep Learning Conference</div>
+                        <span class="meta">Discussing Smart Cities with Google, Nvidia and more</span>
+                        <div class="description"></div>
+                    </div>
+                </a>
+
+
+                <!-- USIgnite 2019 -->
+                <a class="ui inverted card cuip-2019">
+                    <div class="image">
+                        <img src="../Resources/img/infrastructure.png">
                     </div>
                     <div class="content">
                         <div class="header">UTC CUIP Smart Corridor</div>
@@ -54,9 +61,9 @@
                 </a>
 
                 <!-- USIgnite 2018 -->
-                <a class="ui card sccc-2018">
+                <a class="ui inverted card sccc-2018">
                     <div class="image">
-                        <img src="../img/aio.png">
+                        <img src="../Resources/img/aio.png">
                     </div>
                     <div class="content">
                         <div class="header">USIgnite SCCC 2018</div>
@@ -66,9 +73,9 @@
                 </a>
 
                 <!-- USIgnite 2017 -->
-                <a class="ui card sccc-2017">
+                <a class="ui inverted card sccc-2017">
                     <div class="image">
-                        <img src="../img/see-through.png">
+                        <img src="../Resources/img/see-through.png">
                     </div>
                     <div class="content">
                         <div class="header">USIgnite SCCC 2017</div>
@@ -78,9 +85,9 @@
                 </a>
 
                 <!--create-a-thon-->
-                <a class="ui card create-a-thon">
+                <a class="ui inverted card create-a-thon">
                     <div class="image">
-                        <img src="../img/create-a-thon.jpg">
+                        <img src="../Resources/img/create-a-thon.jpg">
                     </div>
                     <div class="content">
                         <div class="header">Create-A-Thon</div>
@@ -90,9 +97,9 @@
                 </a>
 
                 <!--fantastic_five-->
-                <a class="ui card fantastic_five">
+                <a class="ui inverted card fantastic_five">
                     <div class="image">
-                        <img src="../img/fantastic_five.png">
+                        <img src="../Resources/img/fantastic_five.png">
                     </div>
                     <div class="content">
                         <div class="header">Software Design Project</div>
@@ -102,9 +109,9 @@
                 </a>
 
                 <!--nissan-->
-                <a class="ui card nissan">
+                <a class="ui inverted card nissan">
                     <div class="image">
-                        <img src="../img/nissan.png">
+                        <img src="../Resources/img/nissan.png">
                     </div>
                     <div class="content">
                         <div class="header">Nissan of Murfreesboro</div>
@@ -114,20 +121,20 @@
                 </a>
 
                 <!--modding-->
-                <!-- <a class="ui card modding">
+                <a class="ui inverted card modding">
                     <div class="image">
-                        <img src="../img/modding.png">
+                        <img src="../Resources/img/modding.png">
                     </div>
                     <div class="content">
                         <div class="header">Mod Development</div>
                         <span class="meta">Further than where I started!</span>
                         <div class="description"></div>
                     </div>
-                </a> -->
+                </a>
 
-                <!--Modals for each module!-->
-                <div class="ui modal cuip-2019">
-                    <i class="close icon"></i>
+                <!--inverted modals for each module!-->
+                <div class="ui inverted modal cuip-2019">
+                    <i class="olive close icon"></i>
                     <div class="header">2019 USIgnite Conference</div>
                     <div class="content">
                         In 2018, Dr. Mina Sartipi at The University of Tennessee at Chattanooga started a research group
@@ -146,7 +153,7 @@
                         Below is a graphic which has been generated using OpenCV2 and the data gathered from the
                         application I have created. WIth it, it is easy to see many trends. <br>
 
-                        <img class="ui rounded image" src="../img/by_type.png">
+                        <img class="ui rounded image" src="../Resources/img/by_type.png">
 
                         <br>
 
@@ -154,20 +161,17 @@
 
                         <br>
 
-                        <div class="ui embed" data-url="https://video-feeds.utccuip.com/mlk-peeples-cam-3/">
+                        <div class="ui embed cuip-2019" data-url="https://video-feeds.utccuip.com/mlk-houston-cam-1">
                         </div>
                     </div>
                 </div>
 
-                <div class="ui modal sccc-2018">
-                    <i class="close icon"></i>
+                <div class="ui inverted modal sccc-2018">
+                    <i class="olive close icon"></i>
                     <div class="header"></div>
                     <div class="content">
-                        <center>
-                            <iframe width="560" height="315"
-                                src="https://www.youtube-nocookie.com/embed/6nkfsjqPBio?rel=0" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </center>
+                        <div class="ui embed sccc-2018"
+                            data-url="https://www.youtube-nocookie.com/embed/6nkfsjqPBio?rel=0"> </div>
                         <br>
                         To follow up on our CAV (Connected Autonomous Vehicles) initiative, for the 2018 conference the
                         team
@@ -182,16 +186,12 @@
                     </div>
                 </div>
 
-                <div class="ui modal sccc-2017">
-                    <i class="close icon"></i>
+                <div class="ui inverted modal sccc-2017">
+                    <i class="olive close icon"></i>
                     <div class="header">2017 USIgnite Smart Cities Connect Conference</div>
                     <div class="content">
-                        <center>
-                            <iframe width="560" height="315"
-                                src="https://www.youtube-nocookie.com/embed/oL7Xc_uvFyc?rel=0" frameborder="0"
-                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </center>
-                        <br>
+                        <div class="ui embed sccc-2017"
+                            data-url="https://www.youtube-nocookie.com/embed/oL7Xc_uvFyc?rel=0"></div>
                         This programming project was quite a hurdle for me. The 2017 SCCC was in late June, and I joined
                         the
                         research group in early May. I had never done networking, computer vision or machine learning in
@@ -205,8 +205,8 @@
                 </div>
 
 
-                <div class="ui modal create-a-thon">
-                    <i class="close icon"></i>
+                <div class="ui inverted modal create-a-thon">
+                    <i class="olive close icon"></i>
                     <div class="header">First Annual Create-A-Thon - October 2016</div>
                     <div class="content">
                         "CECS Students also took top honors during the app development component of Startup week.
@@ -231,8 +231,8 @@
                     </div>
                 </div>
 
-                <div class="ui modal fantastic_five">
-                    <i class="close icon"></i>
+                <div class="ui inverted modal fantastic_five">
+                    <i class="olive close icon"></i>
                     <div class="header">Fantastic Five - Spring 2016</div>
                     <div class="content">
                         This wasn't my first use of Java's Libraries to produce a desktop program, but this was my first
@@ -254,8 +254,8 @@
                     </div>
                 </div>
 
-                <div class="ui modal nissan">
-                    <i class="close icon"></i>
+                <div class="ui inverted modal nissan">
+                    <i class="olive close icon"></i>
                     <div class="header">Nissan of Murfreesboro - December 2015</div>
                     <div class="content">
                         I will not be revealing too much information for the sake of respect to the Nissan dealership
@@ -272,39 +272,77 @@
                     </div>
                 </div>
 
-                <div class="ui modal modding">
-                    <i class="close icon"></i>
+                <div class="ui inverted modal modding">
+                    <i class="olive close icon"></i>
                     <div class="header">Modding Minecraft - Current</div>
                     <div class="content">
-                        This is not only a hobby, but a passion. All of my mods are open-source and licensed under GNU
-                        GPL
-                        for others to learn from my code, the same way that I learned from others!
-                        <br><br>I enjoy playing games, and writing mods for Minecraft is a great way of practicing
-                        programming, debugging, API usage and more. All of my mods depend on the <a
-                            href="http://minecraftforge.net">Minecraft Forge API</a>. As a result, I constantly aim to
-                        maximize compatibility with up to <i>thousands</i> of other mods, plus for each Minecraft update
-                        I
-                        must adapt my code to not <i>only</i> Minecraft's codebase changes, but Forge's as well.
-                        <br><br>The result? I feel like my ability to be tossed into any programming environment and
-                        survive
-                        is much better than most programmers which are still studying in school.
+                        <p>
+                            This is not only a hobby, but a passion. All of my mods are open-source and licensed under
+                            GNU
+                            GPL for others to learn from my code, the same way that I learned from others!
+                        </p>
+
+                        <p>I enjoy
+                            playing games, and writing mods for Minecraft is a great way of practicing programming,
+                            debugging, API usage and more. All of my mods depend on the <a
+                                href="https://minecraftforge.net">Minecraft Forge API</a>. As a result, I constantly aim
+                            to
+                            maximize compatibility with up to <i>thousands</i> of other mods, plus for each Minecraft
+                            update
+                            I must adapt my code to not <i>only</i> Minecraft's codebase changes, but Forge's as well.
+                        </p>
+                        <p>
+                            The result? I feel like my ability to be tossed into any programming environment and
+                            survive is much better than most programmers which are still studying in school.
+                        </p>
+                        <p>
+                            Additionally, as of September 2019, my mods have cumulatively received over 8 <i>million</i>
+                            downloads! I'm still amazed that my mods have received so much attention and have been
+                            featured in so many modpacks. I am greatly appreciative of the users and bug reporters!
+                        </p>
+                        <img class="ui rounded image" src="../Resources/img/curse.png">
+
                         <br><br><a href="https://github.com/oitsjustjose/"><i class="github icon"></i> Home to All My
                             Mods</a>
+                    </div>
+                    <div class="ui inverted modal cscdc">
+                        <i class="olive close icon"></i>
+                        <div class="header">Chattanooga 2nd Annual Deep Learning Conference</div>
+                        <div class="content">
+                            <p>
+                                Chattanooga's 2nd Annual Deep Learning Conference, hosted by Dr. Mina Sartipi, takes a
+                                focus on Smart Cities. With the conference comes the release of the first-ever
+                                Chattanooga Smart City Data Challenge (CSCDC), which is a dataset release of video
+                                events and air quality data that is sourced from a <b>live urban environment</b>. This
+                                release is a big deal to us and the world - and will be updated each year with new data!
+                                More info on the conference and dataset can be found below:
+                            </p>
+                            <div class="ui center aligned stackable grid">
+                                <div class="ui button"
+                                    onclick="location.href='https://www.utccuip.com/smart-city-data-challenge-dataset'">
+                                    The Dataset
+                                </div>
+                                <div class="ui button"
+                                    onclick="location.href='https://www.utccuip.com/2019-dl-conference'">
+                                    The Conference (Sept 13th 2019)
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="footer">
-        <div class="ui inverted vertical segment">
-            <div class="ui center aligned container">
-                <div class="ui horizontal inverted small divided link list">
-                    <a class="item" href="mailto:stovallj1995@gmail.com"><i class="mail icon"></i> Contact</a>
-                    <a class="item" href="http://github.com/oitsjustjose/oitsjustjose.github.io"><i
-                            class="code icon"></i> Site Source</a>
-                </div>
-            </div>
+    <div class="ui bottom fixed tiny inverted menu">
+        <div class="ui container">
+            <a class="item" href="mailto:stovallj1995@gmail.com">
+                <i class="olive mail icon"></i> Contact
+            </a>
+            <a class="right item" href="https://github.com/oitsjustjose">
+                <i class="olive github icon"></i> My GitHub
+            </a>
         </div>
     </div>
 </body>
