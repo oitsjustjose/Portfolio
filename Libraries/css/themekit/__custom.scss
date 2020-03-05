@@ -1,0 +1,85 @@
+body {
+  background-color: $background;
+  color: $foreground;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.blurred {
+  filter: blur(5px);
+
+  &.unblurable {
+    transition: filter ease-in-out 250ms;
+    &:hover {
+      filter: none;
+      transition: filter ease-in-out 250ms;
+    }
+  }
+}
+
+.bounce {
+  -moz-animation: bounce 2s 10;
+  -webkit-animation: bounce 2s 10;
+  animation: bounce 2s 10;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.color-demo {
+  cursor: pointer;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  box-shadow: 0px 0px 10px 0px rgba(darken($background, 10%), 0.5);
+  transition: all ease-in-out 150ms;
+
+  &.red {
+    background-color: $red;
+    box-shadow: 0px 0px 10px 0px rgba(darken($red, 10%), 0.5);
+  }
+
+  &.blue {
+    background-color: $cyan;
+    box-shadow: 0px 0px 10px 0px rgba(darken($cyan, 10%), 0.5);
+  }
+
+  &.green {
+    background-color: $green;
+    box-shadow: 0px 0px 10px 0px rgba(darken($green, 10%), 0.5);
+  }
+
+  &.bg {
+    background-color: $background;
+  }
+
+  &.fg {
+    background-color: $foreground;
+    color: $background;
+    box-shadow: 0px 0px 10px 0px rgba($foreground, 0.5);
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.display-mode-icon {
+  font-size: 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Stovall | Portfolio</title>
+
+    <link rel="icon" href="/Resources/img/favicon.ico">
+
+    <link rel="stylesheet" href="/Libraries/css/themekit/main-light.css" id="themekit-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="/Libraries/js/themekit/menu.js"></script>
+    <script src="/Libraries/js/themekit/modal.js"></script>
+    <script src="/Libraries/js/app.js"></script>
+
+    <style>
+        button.huge {
+            font-size: 18px;
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body style="visibility: hidden;" onload="document.body.style.visibility = 'visible'">
+    <div class="top titlebar">
+        <div class="mobile-menu">
+            <div class="close-mobile-menu" onclick='toggleMenu()'>
+                <i class="fa fa-close"></i>
+            </div>
+
+            <div class="compact submenu item" onclick="toggleSubMenu(this)">
+                <span>
+                    Pages&nbsp;<i class="fa fa-caret-right"></i>
+                </span>
+                <a href="/Pages/Home" class="compact sub item" <span><i class="fa fa-home"></i>&nbsp;&nbsp;Home</span>
+                </a>
+                <a href="/Pages/Education/" class="compact sub item" <span><i
+                        class="fa fa-pencil"></i>&nbsp;&nbsp;Education</span>
+                </a>
+                <a href="/Pages/Portfolio/" class="compact sub item" <span><i
+                        class="fa fa-terminal"></i>&nbsp;&nbsp;Portfolio</span>
+                </a>
+            </div>
+
+            <a href="https://github.com/oitsjustjose/" target="_blank" class="compact item">
+                <span><i class="fa fa-github"></i>&nbsp;&nbsp;GitHub</span>
+            </a>
+            <a href="mailto:stovallj1995@gmail.com" class="compact item">
+                <span><i class="fa fa-envelope"></i>&nbsp;&nbsp;Contact</span>
+            </a>
+            <div class="compact item" onclick="toggleDisplayMode()">
+                <span class="display-mode-icon"> </span>
+            </div>
+        </div>
+
+        <!-- Mobile friendly menu -->
+        <div class="dropdown item compact" onclick='toggleMenu()'>
+            <span>
+                <i class="fa fa-bars"></i>&nbsp;Menu
+            </span>
+        </div>
+
+        <!-- REAL MENU FOR DESKTOP -->
+
+        <div class="dropdown item">
+            <span>
+                Pages&nbsp;<i class="fa fa-caret-down"></i>
+            </span>
+            <div class="dropdown-content">
+                <a href="/Pages/Home" class="item">
+                    <span><i class="fa fa-home"></i>&nbsp;&nbsp;Home</span>
+                </a>
+                <a href="/Pages/Education/" class="item">
+                    <span><i class="fa fa-pencil"></i>&nbsp;&nbsp;Education</span>
+                </a>
+                <a href="/Pages/Portfolio/" class="item">
+                    <span><i class="fa fa-terminal"></i>&nbsp;&nbsp;Portfolio</span>
+                </a>
+            </div>
+        </div>
+
+        <a href="https://github.com/oitsjustjose/" target="_blank" class="item">
+            <span><i class="fa fa-github"></i>&nbsp;&nbsp;GitHub</span>
+        </a>
+
+        <a href="mailto:stovallj1995@gmail.com" class=" item">
+            <span><i class="fa fa-envelope"></i>&nbsp;&nbsp;Contact</span>
+        </a>
+
+        <div class="item" onclick="toggleDisplayMode()">
+            <span class="display-mode-icon"></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <p>
+            <h1 class="centered">Jose Stovall's Portfolio</h1>
+        </p>
+        <p>
+            <h2 class="centered">Works in many fields from Web Dev to Predictive Analysis</h2>
+        </p>
+        <p>
+            <h3 class="centered">2015 - Present</h3>
+        </p>
+    </div>
+
+
+    <div class="container">
+        <div class="cards">
+            <div class="card" for-modal="thesis-defense">
+                <h3 class="header">Master's Thesis Defense</h3>
+                <p class="content">
+                    Defending my research of 1 <sup>1</sup>/<sub>2</sub> years in video analytics on the MLK Smart
+                    Corridor Testbed.
+                </p>
+                <img class="rounded large centered"
+                    src="https://visualization.utccuip.com/video_feeds/mlk-lindsay-cam-2">
+            </div>
+            <div class="card" for-modal="themekit">
+                <h3 class="header">Juice-UI Theme Kit</h3>
+                <p class="content">
+                    My JQuery-Free Theme Kit written in JavaScript and SCSS.
+                </p>
+                <!-- Spacer :/ -->
+                <p>
+                    &nbsp;
+                </p>
+                <img class="rounded large centered stretched" src="/Resources/img/JuiceUI.gif">
+            </div>
+
+            <div class="card">
+                <h3 class="header">CUDA Streaming for OpenCV</h3>
+                <p class="content">
+                    Accelerating H.264 decoding overhead using the Pipes and CUDA-enabled FFMPEG to bring a smooth
+                    streaming experience to OpenCV.
+
+                    <p>
+                        <a href="https://github.com/oitsjustjose/CUDA-Streamer" target="_blank">
+                            <h3 class="centered">
+                                Find it on GitHub!
+                            </h3>
+                        </a>
+                    </p>
+
+                    <img class="rounded large centered" src="/Resources/img/CUDA-Streamer.png">
+                </p>
+            </div>
+
+            <div class="card" for-modal="JP-Pandas">
+                <h3 class="header">Predicting Hospital Surges</h3>
+                <p class="content">
+                    Using NOAA, OpenFEMA and hospitalization data to predict hospital surges based on natural disasters.
+                </p>
+
+                <img class="rounded small centered" src="/Resources/img/NOAA.png" style="width: 50%; height: auto;">
+            </div>
+
+            <div class="card" for-modal="10-mil-dls">
+                <h3 class="header">10 Million Minecraft Mod Downloads!</h3>
+                <p class="content">
+                    Over time, my mods have gotten better and have received more and more downloads, to the point that
+                    just a few months ago I officially hit 10 million mod downloads!
+                </p>
+                <img class="rounded" src="/Resources/img/10Mil-Curse.png">
+            </div>
+
+            <div class="card" for-modal="mlk-smart-corridor">
+                <h3 class="header">MLK Smart Corridor Testbed</h3>
+                <p class="content">
+                    A 1-mile stretch of Chattanooga's MLK Blvd. dedicated as an infrastructure.
+                </p>
+                <img class="rounded" src="/Resources/img/Anonymous.png">
+            </div>
+
+            <div class="card" for-modal="sccc-2018">
+                <h3 class="header"> USIgnite SCCC 2018
+                </h3>
+                <p class="content">
+                    All-in-One Mapping Program to enhance driver awareness
+                </p>
+                <img class="rounded" src="/Resources/img/SCCC-2018.png">
+            </div>
+
+            <div class="card" for-modal="sccc-2017">
+                <h3 class="header"> USIgnite SCCC 2017 </h3>
+                <p class="content">
+                    See-through technology for vehicles using infrastructure.
+                </p>
+                <img class="rounded" src="/Resources/img/SCCC-2017.png">
+            </div>
+
+            <div class="card" for-modal="create-a-thon">
+                <h3 class="header">Create-A-Thon</h3>
+
+                <p class="content">
+                    Winners of the first-annual programming competition!
+                </p>
+                <img class="centered rounded" src="/Resources/img/Create-A-Thon.jpg">
+            </div>
+
+            <div class="card" for-modal="nissan">
+                <h3 class="header">Nissan of Murfreesboro</h3>
+
+                <p class="content">
+                    A Stock-Image Consolidation Program
+                </p>
+                <img class="centered rounded" src="/Resources/img/Nissan.png">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ACTUAL MODAL CONTENTS -->
+
+
+
+
+
+    <div class="modal" id="thesis-defense">
+        <div class="modal-content">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <h3 class="header">
+                Master's Thesis Defense
+            </h3>
+
+            <p>
+                On March 4th 2020, I defended my thesis called "Video Analytics on the MLK Smart Corridor Testbed" and
+                passed! This thesis discussed many forms of <b>real-time</b> scalable video analytics that were done
+                under <a href="https://utccuip.com/" target="_blank">CUIP</a>. You can see a dashboard of this work
+                below!
+                <img class="rounded" src="/Resources/img/Dashboard.png">
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="themekit">
+        <div class="modal-content">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <h3 class="header">
+                Juice-UI, my JQuery-Free Theme Kit
+            </h3>
+
+            <p>
+                So this has been a fun side-project for me, that started out with a simple desire to write my own stuff
+                from scratch. I've been using the <a href="https://semantic-ui.com" target="_blank">Semantic-UI</a>
+                themekit for years, but finally I decided to both learn a new theming language (SCSS) and add some
+                challenges - not only to design everything myself in a way that is dynamically re-themeable, but to not
+                use JQuery - a JavaScript library I've become <i>very</i> familiar with. Don't get me wrong, I don't
+                have any qualms with JQuery, I just wanted to add a challenge since JQuery isn't anything more than a
+                wrapper for convenient DOM + CSS calls.
+            </p>
+
+            <div class="narrow divider"></div>
+
+            <h3 class="centered">
+                Juice-UI is open source and you can find it on <a href="https://github.com/oitsjustjose/JuiceUI"
+                    target="_blank">GitHub</a>.
+            </h3>
+
+            <div class="narrow divider"></div>
+
+            <h4 class="centered">
+                You can also see a working demo at <a href="https://oitsjustjose.com/JuiceUI"
+                    target="_blank">oitsjustjose.com/JuiceUI</a>.
+            </h4>
+        </div>
+    </div>
+
+    <div class="modal" id="10-mil-dls">
+        <h2 class="header">
+            <a href="https://www.curseforge.com/members/oitsjustjose/projects" target="_blank" style="color: #eeeeee">
+                <button class="huge">
+                    You can find my mods here!
+                </button>
+            </a>
+        </h2>
+    </div>
+
+    <div class="modal" id="mlk-smart-corridor">
+        <div class="modal-content">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <h3 class="header">
+                MLK Smart Corridor
+            </h3>
+
+            <p>
+                In 2018, Dr. Mina Sartipi at The University of Tennessee at Chattanooga started a research
+                group in the SimCenter, the <a href="https://utccuip.com" target="_blank">Center for Urban
+                    Informatics and Progress (CUIP)</a>. CUIP has aimed to be a nexus for collaboration with
+                members of the city, other universities, and more. With our partnerships, we have been
+                granted 16 poles on a mile-long stretch of Martin Luther King Blvd.. With this, we have
+                launched a scalable infrastructure capable of expanding both hardware and software. As part
+                of an ever-expanding project, I have created an object tracker (seen <a
+                    href="https://www.utccuip.com/object-tracking" target="_blank">here</a>) that is
+                parallelized, resilient and produces nearly 500,000 data entries a week <i>per camera</i>.
+                This algorithm allows us to store anonymous data on Kafka, and functions in <b>real
+                    time</b>. This algorithm allows for many data analytics in the future, and has already
+                revealed many trends that can be addressed by the city or its members.
+                <h3 class="centered">
+                    You can also watch an anonymized live stream below!
+                </h3>
+            </p>
+            <img class="rounded" src="https://video-feeds.utccuip.com/mlk-houston-cam-1">
+        </div>
+    </div>
+
+    <div class="modal" id="sccc-2018">
+        <div class="modal-content" style="max-width: 66vw;">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <h3 class="header">
+                2018 USIgnite Smart Cities Connect Conference
+            </h3>
+            <div class="centered embed">
+                <iframe src="https://www.youtube-nocookie.com/embed/6nkfsjqPBio?rel=0" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="divider"></div>
+
+            <p>
+                To follow up on our CAV (Connected Autonomous Vehicles) initiative, for the 2018 conference
+                the team decided to work on a unified map for anonymously mapping many subjects of interest.
+                For the most part, the above video I made should suffice as explanation, but it was fun
+                being the <b>only one</b> working on the infrastructure end.
+            </p>
+            <p>
+                Without a doubt, we couldn't have done this without <a href="https://www.linkedin.com/in/acedrew"
+                    target="_blank">Andrew Rodgers</a>, so a
+                million thanks to him for helping us with our testbed.
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="sccc-2017">
+        <div class="modal-content" style="max-width: 66vw;">
+            <span class="close">
+                <i class="fa fa-close"> </i>
+            </span>
+            <h3 class="header"> 2017 USIgnite Smart Cities Connect Conference </h3>
+
+            <div class="centered embed">
+                <iframe src="https://www.youtube-nocookie.com/embed/oL7Xc_uvFyc?rel=0" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="divider"></div>
+
+            <p>
+                This programming project was quite a hurdle for me. The 2017 SCCC was in late June, and I joined the
+                research group in early May. I had never done networking, computer vision or machine learning in my
+                life, nor had I ever written in Python. Yet our team managed to get this together, with myself
+                handling at least 70% of the workload. This project had a live-demo that took everyone by surprise,
+                but was <i>incredibly</i> stressful on my end. Nonetheless, this was the first time that I felt
+                confident that I could accomplish anything I ever wanted.
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="create-a-thon">
+        <div class="modal-content" style="max-width: 66vw;">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <h3 class="header">First Annual Create-A-Thon - October 2016</h3>
+
+            <p>
+                "CECS Students also took top honors during the app development component of Startup week.
+                InfoSystems and Skuid presented a $10K scholarship to grand prize winners Alay Patel, Jose
+                Stovall, Steven Hullander, and Evan Grayson, who are all juniors in the Computer Science and
+                Engineering Department. The fifteen teams in the competition were tasked with creating a
+                mobile app that allows consumers to digitally keep track of their physical conditions. The
+                first and second place teams excelled in creating an inviting and intuitive UX/UI design,
+                but the UTC “Brogrammers” took it a step further by adding a mini-game to their app."
+                ~Holley Beeland
+            </p>
+
+            <p>
+                This was my first detailed look at HTML, CSS and JavaScript - before this point I only had
+                minor experience, and still only consider myself amateur at best. Regardless, this was a
+                fantastic learning experience and great practive of my program design skills!
+            </p>
+
+            <p class="centered">
+                <a href="https://github.com/oitsjustjose/Create-A-Thon/" target="_blank">
+                    <button>
+                        <i class="fa fa-github"></i> App Repository
+                    </button>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="nissan">
+        <div class="modal-content">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <h3 class="header">Nissan of Murfreesboro Consolidation Program</h3>
+
+            <p>
+                I will not be revealing too much information for the sake of respect to the Nissan
+                dealership which offered me the program contract, but this marks the first time I was
+                <i>ever</i> paid to program! The program was a simple, UI-based string comparator which
+                allowed a user to select a file, paste a list, and then compare both string collections and
+                output which did not match. While this sounds vague, consider it in the context of comparing
+                incoming vehicles with current stock.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
