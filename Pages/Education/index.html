@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Stovall | Education</title>
+
+    <link rel="icon" href="/Resources/img/favicon.ico">
+
+    <link rel="stylesheet" href="/Libraries/css/themekit/main-light.css" id="themekit-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="/Libraries/js/themekit/menu.js"></script>
+    <script src="/Libraries/js/themekit/modal.js"></script>
+    <script src="/Libraries/js/app.js"></script>
+</head>
+
+<body style="visibility: hidden;" onload="document.body.style.visibility = 'visible'">
+    <div class="top titlebar">
+        <div class="mobile-menu">
+            <div class="close-mobile-menu" onclick='toggleMenu()'>
+                <i class="fa fa-close"></i>
+            </div>
+
+            <div class="compact submenu item" onclick="toggleSubMenu(this)">
+                <span>
+                    Pages&nbsp;<i class="fa fa-caret-right"></i>
+                </span>
+                <a href="/Pages/Home" class="compact sub item" <span><i class="fa fa-home"></i>&nbsp;&nbsp;Home</span>
+                </a>
+                <a href="/Pages/Education/" class="compact sub item" <span><i
+                        class="fa fa-pencil"></i>&nbsp;&nbsp;Education</span>
+                </a>
+                <a href="/Pages/Portfolio/" class="compact sub item" <span><i
+                        class="fa fa-terminal"></i>&nbsp;&nbsp;Portfolio</span>
+                </a>
+            </div>
+
+            <a href="https://github.com/oitsjustjose/" target="_blank" class="compact item">
+                <span><i class="fa fa-github"></i>&nbsp;&nbsp;GitHub</span>
+            </a>
+
+            <a href="mailto:stovallj1995@gmail.com" class="compact item">
+                <span><i class="fa fa-envelope"></i>&nbsp;&nbsp;Contact</span>
+            </a>
+
+            <div class="compact item" onclick="toggleDisplayMode()">
+                <span class="display-mode-icon"> </span>
+            </div>
+        </div>
+
+        <!-- Mobile friendly menu -->
+        <div class="dropdown item compact" onclick='toggleMenu()'>
+            <span>
+                <i class="fa fa-bars"></i>&nbsp;Menu
+            </span>
+        </div>
+
+        <!-- REAL MENU FOR DESKTOP -->
+
+        <div class="dropdown item">
+            <span>
+                Pages&nbsp;<i class="fa fa-caret-down"></i>
+            </span>
+            <div class="dropdown-content">
+                <a href="/Pages/Home" class="item">
+                    <span><i class="fa fa-home"></i>&nbsp;&nbsp;Home</span>
+                </a>
+                <a href="/Pages/Education/" class="item">
+                    <span><i class="fa fa-pencil"></i>&nbsp;&nbsp;Education</span>
+                </a>
+                <a href="/Pages/Portfolio/" class="item">
+                    <span><i class="fa fa-terminal"></i>&nbsp;&nbsp;Portfolio</span>
+                </a>
+            </div>
+        </div>
+
+        <a href="https://github.com/oitsjustjose/" target="_blank" class="item">
+            <span><i class="fa fa-github"></i>&nbsp;&nbsp;GitHub</span>
+        </a>
+
+        <a href="mailto:stovallj1995@gmail.com" class="item">
+            <span><i class="fa fa-envelope"></i>&nbsp;&nbsp;Contact</span>
+        </a>
+
+        <div class="item" onclick="toggleDisplayMode()">
+            <span class="display-mode-icon"></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="centered">
+            Education
+        </h1>
+    </div>
+
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <div class="cards">
+            <div class="card">
+                <h3 class="header">University of Tennessee at Chattanooga</h3>
+                <p class="content">
+                    <h4 class="centered">
+                        Master's of Science: Computer Science
+                    </h4>
+                    <p class="centered">
+                        Focus in Data Science
+                    </p>
+                    <h5 class="centered" style="padding-top: .25rem; padding-bottom: .25rem;">
+                        Specialization in Mathematics
+                    </h5>
+                    <ul style="padding-left: 2rem;">
+                        <li>
+                            Graduating in May 2020
+                        </li>
+                        <li>
+                            Current GPA: 3.714
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div class="card">
+                <h3 class="header">University of Tennessee at Chattanooga</h3>
+                <p class="content">
+                    <h4 class="centered">
+                        Bachelor's of Science: Computer Science
+                    </h4>
+                    <p class="centered">
+                        Focus in Software Systems
+                    </p>
+                    <h5 class="centered" style="padding-top: .25rem; padding-bottom: .25rem;">
+                        Minor in Business Administration
+                    </h5>
+
+                    <ul style="padding-left: 2rem;">
+                        <li>Graduated Cum Laude May 2018</li>
+                        <li>GPA: 3.825</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <h1>Why I Chose UTC</h1>
+        <p>
+            UT Chattanooga has a much more modern and dynamically changing Computer Science curriculum compared to
+            many others, which are not subdivided into specialties as they are at UTC. Additionally, these other schools
+            often focus on much more primitive and on a machine level technologies. While these are practical to some
+            degree, they did not pertain to my interests and quite frankly do not reflect the future of web-based
+            services.
+        </p>
+        <p>
+            UTC offered so many opportunities beyond the scope of day-to-day class that I would never have had at MTSU.
+            Working with Dr. Mina Sartipi's research team has been the greatest proof of the opportunities lurking at
+            UTC. Working under her has taught me how to teach <i>myself</i> - learning Python, Computer Vision and
+            Machine Learning in my first month with her pushed me off a cliff where my only parachute was to dedicate
+            myself and learn the content.
+        </p>
+    </div>
+</body>
+
+</html>

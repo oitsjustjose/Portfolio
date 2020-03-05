@@ -1,0 +1,17 @@
+.container {
+  width: 90vw;
+  padding: 2rem 5vw;
+}
+
+.divider {
+  width: 70vw;
+  height: 10px;
+  border-bottom: 1px solid map-get($components, "item");
+  margin: 1rem auto;
+  &.wide {
+    width: 100vw;
+  }
+  &.narrow {
+    width: 30vw;
+  }
+}

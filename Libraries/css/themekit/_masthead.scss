@@ -1,0 +1,90 @@
+.masthead {
+  height: 100vh;
+  width: 100%;
+  background-color: $mastColor;
+  color: $background;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.gradient {
+    background: url("../../../Resources/img/cover.png"), $mastColor;
+    background: url("../../../Resources/img/cover.png"), -webkit-linear-gradient(to bottom left, $cyan, $green);
+    background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, $cyan, $green);
+
+    &.rainbow {
+      background: linear-gradient(45deg, #ff0000, #ffb200, #f2ff00, #00c00c, #00d2d0, #0040d2, #a400f6, #f600f1);
+      background-size: 1600% 1600%;
+      color: #252525;
+
+      -webkit-animation: RainbowGradient 30s ease infinite;
+      -moz-animation: RainbowGradient 30s ease infinite;
+      animation: RainbowGradient 30s ease infinite;
+
+      @-webkit-keyframes RainbowGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 51%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @-moz-keyframes RainbowGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 51%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      @keyframes RainbowGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 51%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    }
+  }
+
+  p.content {
+    font-size: 64px;
+    font-weight: 900;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .subheader {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .subsubheader {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  .down {
+    position: absolute;
+    bottom: 0;
+    i {
+      font-size: 64px;
+    }
+  }
+}
