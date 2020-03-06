@@ -234,7 +234,12 @@
                 passed! This thesis discussed many forms of <b>real-time</b> scalable video analytics that were done
                 under <a href="https://utccuip.com/" target="_blank">CUIP</a>. You can see a dashboard of this work
                 below!
-                <img class="rounded" src="/Resources/img/Dashboard.png">
+
+                <div class="embed">
+                    <iframe data-src="https://dashboard.utccuip.com" frameborder="0"
+                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
             </p>
         </div>
     </div>
@@ -310,19 +315,12 @@
                     You can also watch an anonymized live stream by clicking the image below!
                 </h3>
             </p>
-            <script>
-                let streamRunning = false;
-                const toggleStream = (el) => {
-                    streamRunning = !streamRunning;
-                    if (streamRunning) {
-                        el.src = "https://video-feeds.utccuip.com/mlk-houston-cam-1";
-                    } else {
-                        el.src = "/Resources/img/Anonymous.png"
-                    }
-                };
-            </script>
-            <img style="cursor: pointer" class="rounded" src="/Resources/img/Anonymous.png"
-                onclick="toggleStream(this)">
+
+            <div class="embed">
+                <iframe data-src="https://video-feeds.utccuip.com/mlk-houston-cam-1" frameborder="0"
+                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
 
             <div class="centered" style="padding-top: 1rem; padding-bottom: 1rem">
                 <a href="https://video-feeds.utccuip.com/mlk-houston-cam-1" target="_blank">

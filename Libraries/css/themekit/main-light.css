@@ -453,11 +453,18 @@ button.cyan.outlined:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(384px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
   grid-auto-rows: 1fr;
   grid-gap: 2rem;
   grid-auto-flow: dense;
+}
+
+@media (max-width: 767px) {
+  .cards {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 .cards .card {
