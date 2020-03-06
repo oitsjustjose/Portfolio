@@ -115,8 +115,7 @@
                     Defending my research of 1 <sup>1</sup>/<sub>2</sub> years in video analytics on the MLK Smart
                     Corridor Testbed.
                 </p>
-                <img class="rounded large centered"
-                    src="https://visualization.utccuip.com/video_feeds/mlk-lindsay-cam-2">
+                <img class="rounded large centered" src="/Resources/img/Vis.png">
             </div>
             <div class="card" for-modal="themekit">
                 <h3 class="header">Juice-UI Theme Kit</h3>
@@ -308,10 +307,31 @@
                     time</b>. This algorithm allows for many data analytics in the future, and has already
                 revealed many trends that can be addressed by the city or its members.
                 <h3 class="centered">
-                    You can also watch an anonymized live stream below!
+                    You can also watch an anonymized live stream by clicking the image below!
                 </h3>
             </p>
-            <img class="rounded" src="https://video-feeds.utccuip.com/mlk-houston-cam-1">
+            <script>
+                let streamRunning = false;
+                const toggleStream = (el) => {
+                    streamRunning = !streamRunning;
+                    if (streamRunning) {
+                        el.src = "https://video-feeds.utccuip.com/mlk-houston-cam-1";
+                    } else {
+                        el.src = "/Resources/img/Anonymous.png"
+                    }
+                };
+            </script>
+            <img style="cursor: pointer" class="rounded" src="/Resources/img/Anonymous.png"
+                onclick="toggleStream(this)">
+
+            <div class="centered" style="padding-top: 1rem; padding-bottom: 1rem">
+                <a href="https://video-feeds.utccuip.com/mlk-houston-cam-1" target="_blank">
+                    <button>
+                        <i class="fa fa-external-link"></i>&nbsp;&nbsp;Open Stream
+                    </button>
+                </a>
+            </div>
+
         </div>
     </div>
 
