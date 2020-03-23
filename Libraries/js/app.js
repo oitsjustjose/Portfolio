@@ -30,11 +30,22 @@ const toggleDisplayMode = () => {
 };
 
 window.addEventListener("DOMContentLoaded", (evt) => {
-    if (window.localStorage.getItem("displayMode") != null) {
-        currentDisplayMode = window.localStorage.getItem("displayMode");
-    } else {
-        window.localStorage.setItem("displayMode", "dark");
+    if (window.localStorage.getItem("displayMode") == null) {
+        // Match with system dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            window.localStorage.setItem("displayMode", "dark");
+        }
+        // Match with system light mode
+        else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            window.localStorage.setItem("displayMode", "light");
+        }
+        // Literally choose the middle option 
+        else {
+            window.localStorage.setItem("displayMode", "moonlight");
+        }
     }
+
+    currentDisplayMode = window.localStorage.getItem("displayMode");
 
     if (currentDisplayMode == "dark") {
         document.getElementById("themekit-css").href = "/Libraries/css/themekit/main-dark.css";
@@ -43,5 +54,6 @@ window.addEventListener("DOMContentLoaded", (evt) => {
     } else {
         document.getElementById("themekit-css").href = "/Libraries/css/themekit/main-light.css";
     }
+    
     updateDisplayModeIcons();
 });
