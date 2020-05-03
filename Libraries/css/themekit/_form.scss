@@ -1,0 +1,169 @@
+input {
+    appearance: none !important;
+}
+
+form {
+    max-width: 100vw;
+
+    .input-with-icon {
+        i {
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        & input {
+            padding-left: 32px !important;
+        }
+    }
+
+    .flex-form {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+        grid-gap: 1rem 3rem;
+        grid-auto-flow: dense;
+        margin: auto;
+        padding: 1rem;
+
+        &.labelled {
+            @media (max-width: 767px) {
+                grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+            }
+            grid-template-columns: 1fr 5fr;
+        }
+
+        input {
+            background-color: lighten($background, 25%);
+            color: $foreground;
+
+            &[type="password"],
+            &[type="text"],
+            &[type="date"],
+            &[type="email"],
+            &[type="file"],
+            &[type="month"],
+            &[type="number"],
+            &[type="tel"],
+            &[type="search"],
+            &[type="url"],
+            &[type="week"] {
+                font-family: "Spartan";
+                border-radius: 0.3em;
+                box-shadow: 0px 0px 10px 0px rgba(darken($background, 10%), 0.5);
+                transition: all 150ms ease-in-out;
+                font-size: 14px;
+                padding: 0.75rem 1rem;
+                border: none;
+                outline: none;
+            }
+
+            &[type="color"] {
+                border-radius: 0.3em;
+            }
+
+            &[type="search"] {
+                width: 100%;
+            }
+
+            &::placeholder {
+                color: rgba($foreground, 0.5);
+            }
+
+            &[type="checkbox"],
+            &[type="color"],
+            &[type="radio"] {
+                margin: auto;
+            }
+
+            &[type="range"] {
+                height: 26px;
+                -webkit-appearance: none;
+                margin: 10px 0;
+                width: 100%;
+                background-color: transparent;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &::-webkit-slider-runnable-track {
+                    width: 100%;
+                    height: 14px;
+                    cursor: pointer;
+                    animation: 0.2s;
+                    box-shadow: 0px 0px 10px 0px rgba(darken($background, 10%), 0.5);
+                    background: lighten($background, 10%);
+                    border-radius: 14px;
+                }
+
+                &::-webkit-slider-thumb {
+                    box-shadow: 0px 0px 10px 0px rgba(darken($background, 10%), 0.5);
+                    height: 20px;
+                    width: 40px;
+                    border-radius: 12px;
+                    background: $cyan;
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+
+    input[type="reset"] {
+        padding: 0.75rem 1rem;
+        border: none;
+        outline: none;
+        color: $foreground;
+        user-select: none;
+        cursor: pointer;
+        width: fit-content;
+
+        border-radius: 0.3em;
+        box-shadow: 0px 0px 10px 0px rgba(darken($background, 10%), 0.5);
+        transition: all 150ms ease-in-out;
+        font-size: 14px;
+
+        background-color: $red;
+
+        &:hover {
+            background-color: lighten($red, 10%);
+        }
+
+        &:active {
+            background-color: lighten($red, 5%);
+        }
+
+        &.small {
+            font-size: 12px;
+            padding: 0.5rem 0.75rem;
+        }
+
+        &.outlined {
+            background-color: transparent;
+            border: 2px solid map-get($components, "button");
+
+            &:hover {
+                background-color: transparent;
+                border: 2px solid lighten($background, 10%);
+                transition: all 150ms ease-in-out;
+            }
+
+            &:active {
+                background-color: transparent;
+                border: 2px solid lighten($background, 5%);
+            }
+        }
+    }
+
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        display: block;
+        width: fit-content;
+        margin: auto;
+        font-family: "Spartan";
+        margin-bottom: 1rem;
+    }
+}
