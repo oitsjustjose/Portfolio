@@ -30,16 +30,6 @@
     animation: Rotate 10s ease infinite;
 }
 
-.cards.grid {
-    display: grid;
-    flex-direction: row;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
-    grid-auto-rows: 1fr;
-    grid-gap: 2rem;
-    grid-auto-flow: dense;
-}
-
 @keyframes Rotate {
     0% {
         filter: hue-rotate(0deg);
@@ -55,6 +45,24 @@
     }
     100% {
         filter: hue-rotate(0deg);
+    }
+}
+
+.cards.grid {
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 2rem;
+    grid-auto-flow: dense;
+}
+
+/* Force a 2-column grid on larger displays */
+
+@media(min-width: 512px) {
+    .cards.grid {
+        grid-template-columns: repeat(2, minmax(256px, 1fr));
     }
 }
 
