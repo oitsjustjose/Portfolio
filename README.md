@@ -1,5 +1,5 @@
 # About
 
-This entire website is meant to be a reflection of myself and my programming contributions, creations and portfolio!
+[Live Here](https://oitsjustjose.com/)
 
-Made using SemanticUI
+A personal portfolio site made using Vanilla JS and [Bootstrap 5](https://v5.getbootstrap.com)
