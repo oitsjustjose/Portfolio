@@ -50,6 +50,10 @@ body.dark #displayModeSwitch {
     border-color: #00bee0 !important;
 }
 
+body.dark .card {
+    background-color: #323232 !important;
+}
+
 @keyframes Rotate {
     0% {
         filter: hue-rotate(0deg);
