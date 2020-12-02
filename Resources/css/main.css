@@ -1,13 +1,21 @@
 .codewars {
     width: 1rem;
     height: 1rem;
-    margin-bottom: 4px;
-    border-radius: 2px;
-    filter: opacity(60%);
+    margin-bottom: 1px;
     transition: filter ease-in-out 200ms;
+    vertical-align: sub !important;
+    filter: opacity(80%);
 }
 
 .codewars:hover {
+    filter: opacity(100%);
+}
+
+body.dark .codewars {
+    filter: opacity(80%);
+}
+
+body.dark .codewars:hover {
     filter: opacity(100%);
 }
 
@@ -27,12 +35,32 @@
 
 .gradient.masthead {
     text-align: center;
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     padding-top: 25vh;
     /* Beautiful gradient effect */
     background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
     animation: Rotate 10s ease infinite;
+}
+
+#displayModeSwitch, label[for="displayModeSwitch"] {
+    cursor: pointer;
+    user-select: none;
+}
+
+body.dark {
+    background-color: #252525 !important;
+    color: #eeeeee !important;
+}
+
+body.dark .navbar, body.dark .navbar *:not(#displayModeSwitch) {
+    background-color: #202020 !important;
+    color: #eeeeee !important;
+}
+
+body.dark #displayModeSwitch {
+    background-color: #00bee0 !important;
+    border-color: #00bee0 !important;
 }
 
 @keyframes Rotate {
