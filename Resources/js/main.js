@@ -10,7 +10,7 @@ const urls = {
 };
 
 const initColorScheme = () => {
-    const setting = window.localStorage.getItem('color-mode');
+    const setting = localStorage.getItem('color-mode');
     if (setting) {
         if (setting === 'dark') {
             currentColorMode = 'dark';
@@ -19,13 +19,11 @@ const initColorScheme = () => {
         }
     }
 
-    window.localStorage.setItem('color-mode', currentColorMode);
+    localStorage.setItem('color-mode', currentColorMode);
     if (currentColorMode === ColorModes.Dark) {
         document.body.classList.add('dark');
-        document.querySelector('#displayModeSwitch').checked = true;
     } else {
         document.body.classList.remove('dark');
-        document.querySelector('#displayModeSwitch').checked = false;
     }
 };
 
@@ -39,7 +37,7 @@ const bootstrapNavbar = () => {
     }
 
     document.body.innerHTML = `
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ${title === "Home" ? 'navbar-translucent' : ''}">
+    <nav class="navbar navbar-expand-lg navbar-${currentColorMode === 'dark' ? 'dark' : 'light'} bg-${currentColorMode === 'dark' ? 'dark' : 'light'} fixed-top ${title === "Home" ? 'navbar-translucent' : ''}" id="main-nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Jose's Portfolio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -92,7 +90,7 @@ const bootstrapNavbar = () => {
                 </ul>
                 <form class="d-flex">
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="displayModeSwitch">
+                        <input class="form-check-input" type="checkbox" id="displayModeSwitch" ${currentColorMode === 'dark' && 'checked'}>
                         <label class="form-check-label" for="displayModeSwitch">Dark Mode</label>
                     </div>    
                 </form>
@@ -108,8 +106,8 @@ const bootstrapNavbar = () => {
 };
 
 window.addEventListener('load', () => {
-    bootstrapNavbar();
     initColorScheme();
+    bootstrapNavbar();
 
     document.querySelector('#displayModeSwitch').addEventListener('click', () => {
         currentColorMode = currentColorMode === ColorModes.Dark ? ColorModes.Light : ColorModes.Dark;
@@ -118,5 +116,16 @@ window.addEventListener('load', () => {
         } else {
             document.body.classList.remove('dark');
         }
+
+        const nav = document.querySelector('#main-nav');
+        nav.classList.remove('navbar-light');
+        nav.classList.remove('navbar-dark');
+        nav.classList.remove('bg-light');
+        nav.classList.remove('bg-dark');
+
+        nav.classList.add(`navbar-${currentColorMode === 'dark' ? 'dark' : 'light'}`);
+        nav.classList.add(`bg-${currentColorMode === 'dark' ? 'dark' : 'light'}`);
+
+        localStorage.setItem('color-mode', currentColorMode);
     });
 });

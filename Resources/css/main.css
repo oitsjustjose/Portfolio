@@ -11,14 +11,6 @@
     filter: opacity(100%);
 }
 
-body.dark .codewars {
-    filter: opacity(80%);
-}
-
-body.dark .codewars:hover {
-    filter: opacity(100%);
-}
-
 .navbar-translucent {
     opacity: 75%;
     transition: opacity ease-in-out 250ms;
@@ -53,11 +45,6 @@ body.dark {
     color: #eeeeee !important;
 }
 
-body.dark .navbar, body.dark .navbar *:not(#displayModeSwitch) {
-    background-color: #202020 !important;
-    color: #eeeeee !important;
-}
-
 body.dark #displayModeSwitch {
     background-color: #00bee0 !important;
     border-color: #00bee0 !important;
@@ -68,13 +55,13 @@ body.dark #displayModeSwitch {
         filter: hue-rotate(0deg);
     }
     25% {
-        filter: hue-rotate(90deg);
+        filter: hue-rotate(45deg);
     }
     50% {
-        filter: hue-rotate(180deg);
+        filter: hue-rotate(90deg);
     }
     75% {
-        filter: hue-rotate(90deg);
+        filter: hue-rotate(45deg);
     }
     100% {
         filter: hue-rotate(0deg);
