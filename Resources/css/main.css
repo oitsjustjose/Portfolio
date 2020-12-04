@@ -35,6 +35,11 @@
     animation: Rotate 10s ease infinite;
 }
 
+blockquote.blockquote p {
+    border-left: 1px solid black;
+    padding-left: 1rem;
+}
+
 #displayModeSwitch, label[for="displayModeSwitch"] {
     cursor: pointer;
     user-select: none;
@@ -52,6 +57,14 @@ body.dark #displayModeSwitch {
 
 body.dark .card {
     background-color: #323232 !important;
+}
+
+body.dark .modal-content {
+    background-color: #252525;
+}
+
+body.dark blockquote.blockquote p {
+    border-left: 1px solid #aaaaaa;
 }
 
 @keyframes Rotate {
