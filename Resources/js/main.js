@@ -78,6 +78,16 @@ const bootstrapNavbar = () => {
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://blog.oitsjustjose.com/">
+                            <span>
+                                <i class="fas fa-blog"></i>
+                                <span class="link-desc">
+                                    &nbsp;Blog
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" target="_blank" href="https://www.codewars.com/users/oitsjustjose">
                             <span>
                                 ${codewarsIcn}
