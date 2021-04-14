@@ -5,8 +5,9 @@ let currentColorMode = window.matchMedia('(prefers-color-scheme: dark)').matches
 
 const urls = {
     '/': 'Home',
+    '/Experience/': 'Experience',
+    '/Education/': 'Education',
     '/Portfolio/': 'Portfolio',
-    '/Education/': 'Education'
 };
 
 const initColorScheme = () => {
@@ -36,6 +37,15 @@ const bootstrapNavbar = () => {
         return;
     }
 
+    const endpoints = Object.keys(urls).map((url) => `
+        <li>
+            <a class="dropdown-item" href="${url}">
+                <code>
+                    ${urls[url] == title ? `<b>${urls[url]}</b>` : urls[url]}
+                </code>
+            </a>
+        </li>
+    `);
     document.body.innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-${currentColorMode === 'dark' ? 'dark' : 'light'} bg-${currentColorMode === 'dark' ? 'dark' : 'light'} fixed-top ${title === "Home" ? 'navbar-translucent' : ''}" id="main-nav">
         <div class="container-fluid">
@@ -52,9 +62,7 @@ const bootstrapNavbar = () => {
                             <code>Pages/${title}</code>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/"><code>${title === 'Home' ? '<b>Home</b>' : "Home"}</code></a></li>
-                            <li><a class="dropdown-item" href="/Portfolio"><code>${title === 'Portfolio' ? '<b>Portfolio</b>' : "Portfolio"}</code></a></li>
-                            <li><a class="dropdown-item" href="/Education"><code>${title === 'Education' ? '<b>Education</b>' : "Education"}</code></a></li>
+                            ${endpoints.join("\n")}
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -119,7 +127,7 @@ window.addEventListener('load', () => {
     initColorScheme();
     bootstrapNavbar();
 
-    document.querySelector('#displayModeSwitch').addEventListener('click', () => {
+    document.getElementById('displayModeSwitch').addEventListener('click', () => {
         currentColorMode = currentColorMode === ColorModes.Dark ? ColorModes.Light : ColorModes.Dark;
         if (currentColorMode === ColorModes.Dark) {
             document.body.classList.add('dark');
