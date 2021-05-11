@@ -75,6 +75,10 @@ body.dark .modal-header {
     border-bottom: 1px solid #202020 !important;
 }
 
+body.dark .btn-close {
+    filter: invert(1);
+}
+
 @keyframes Rotate {
     0% {
         filter: hue-rotate(0deg);

@@ -148,6 +148,7 @@ const bootstrapJobModal = () => {
     modalHeader.className = 'modal-header';
     modalHeader.innerHTML = `
         <h2 class='modal-title'>I'm Looking for a Job!</h2>
+        <button type='button' class='btn-close' id='hireMeModalClose'></button>
     `;
 
     const modalBody = document.createElement('div');
@@ -185,6 +186,10 @@ const bootstrapJobModal = () => {
 
     const modalObj = new bootstrap.Modal(modal);
     modalObj.show();
+
+    document.getElementById('hireMeModalClose').addEventListener('click', () => {
+        modalObj.hide();
+    });
 };
 
 window.addEventListener('load', () => {
