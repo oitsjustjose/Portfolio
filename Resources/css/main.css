@@ -67,6 +67,14 @@ body.dark blockquote.blockquote p {
     border-left: 1px solid #aaaaaa;
 }
 
+body.dark .modal-footer {
+    border-top: 1px solid #202020 !important;
+}
+
+body.dark .modal-header {
+    border-bottom: 1px solid #202020 !important;
+}
+
 @keyframes Rotate {
     0% {
         filter: hue-rotate(0deg);
