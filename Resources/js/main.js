@@ -1,6 +1,6 @@
 const ColorModes = { Dark: 'dark', Light: 'light' };
 // Yes this is dumb, but it's an easy way to handle this.
-const lookingForJob = true && !window.localStorage.getItem('hasSeenJobModal');
+const lookingForJob = false; // switch to: true && !window.localStorage.getItem('hasSeenJobModal');
 
 // Set the current color mode to the default display mode
 let currentColorMode = window.matchMedia('(prefers-color-scheme: dark)').matches
