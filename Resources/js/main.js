@@ -79,7 +79,7 @@ const bootstrapNavbar = () => {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://oitsjustjo.se/u/linkedin">
+                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/jose-stovall-363388160/">
                             <span>
                                 <i class="fab fa-linkedin"></i>
                                 <span class="link-desc">
