@@ -67,9 +67,23 @@ body.dark {
   color: #eeeeee !important;
 }
 
+#displayModeSwitch {
+  border-color: #659999 !important;
+}
+
+#displayModeSwitch:focus {
+  box-shadow: 0 0 0 0.25rem #65999940 !important;
+}
+
+body:not(.dark) #displayModeSwitch {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23659999AA'/%3e%3c/svg%3e");
+}
+body:not(.dark) #displayModeSwitch:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23659999'/%3e%3c/svg%3e");
+}
+
 body.dark #displayModeSwitch {
-  background-color: #00bee0 !important;
-  border-color: #00bee0 !important;
+  background-color: #659999 !important;
 }
 
 body.dark .card {
