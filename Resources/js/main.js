@@ -1,6 +1,7 @@
 const ColorModes = { Dark: 'dark', Light: 'light' };
 // Yes this is dumb, but it's an easy way to handle this.
-const lookingForJob = false; // switch to: true && !window.localStorage.getItem('hasSeenJobModal');
+const jobModalKey = 'seenJobModal2025'; // Change this to make the modal re-populate
+const lookingForJob = true && !window.localStorage.getItem(jobModalKey);
 
 // Set the current color mode to the default display mode
 let currentColorMode = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -66,24 +67,31 @@ const bootstrapNavbar = () => {
                             ${endpoints.join("\n")}
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://github.com/oitsjustjose">
-                            <span>
-                                <i class="fab fa-github"></i>
-                                <span class="link-desc">
-                                    &nbsp;GitHub
-                                </span>
-                            </span>
+
+                    <li class="expanding-navbar-item nav-item">
+                        <a class="nav-link" target="_blank" href="/Resume.pdf">
+                            <div class="expanding-navbar-item-inner">
+                                <i class="fa fa-file-pdf"></i>
+                                <div class="link-desc">Resume</div>
+                            </div>
                         </a>
                     </li>
-                    <li class="nav-item">
+
+                    <li class="expanding-navbar-item nav-item">
                         <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/jose-stovall-363388160/">
-                            <span>
+                            <div class="expanding-navbar-item-inner">
                                 <i class="fab fa-linkedin"></i>
-                                <span class="link-desc">
-                                    &nbsp;LinkedIn
-                                </span>
-                            </span>
+                                <div class="link-desc">LinkedIn</div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="expanding-navbar-item nav-item">
+                        <a class="nav-link" target="_blank" href="https://github.com/oitsjustjose">
+                            <div class="expanding-navbar-item-inner">
+                                <i class="fab fa-github-alt"></i>
+                                <div class="link-desc">GitHub</div>
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -113,7 +121,7 @@ const bootstrapJobModal = () => {
   modal.className = 'modal fade';
   modal.id = 'hireMeModal';
   modal.addEventListener('hide.bs.modal', () => {
-    window.localStorage.setItem('hasSeenJobModal', true);
+    window.localStorage.setItem(jobModalKey, true);
   });
 
   const modalWr = document.createElement('div');
@@ -133,17 +141,16 @@ const bootstrapJobModal = () => {
   modalBody.className = 'modal-body';
   modalBody.innerHTML = `
     <p>
-        Hi there! My name is Jose Stovall and I'm looking for a new job! I am currently
-        contracted through Ernst & Young as a Data Modeler, but my contract ends in
-        late July so I'm preemptively trying to situate a future, permanent position
-        with a new company for after my contract ends!
+        Hi there! My name is Jose Stovall and I'm looking for a job! I was previously working
+        for Free Range Games where I learned a lot about Game Development but also Backend &
+        Dev-OPs work, but unfortunately myself and many others were laid off on March 6th, 2025.
     </p>
 
     <p>
-        Currently I am located just outside of Nashville, TN but I am looking to
-        relocate to the Seattle WA area so I am currently looking for positions both
-        in Nashville and in the Seattle area. I am set up to work remotely but I'm 
-        always glad to go in to the office as I'm fully COVID-19 vaccinated!
+        Currently I am located just outside of Nashville, TN, but my wife is an aspiring Paleontologist
+        and is looking to progress her education and career, so we're highly considering relocating to
+        Chicago, IL to take advantage of the several excellent educational and career experiences in
+        the area.
     </p>
 
     <p>
@@ -153,7 +160,9 @@ const bootstrapJobModal = () => {
         in the menu or <a href="mailto:stovallj1995@gmail.com">via email</a>!
     </p>
 
-    <sub>You should only see this once</sub>
+    <p>
+      <b>Additionally, <a href="/Resume.pdf">my current resume can be found here!</a></b>
+    </p>
     `;
 
   modalContent.appendChild(modalHeader);
