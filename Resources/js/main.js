@@ -1,7 +1,7 @@
 const ColorModes = { Dark: 'dark', Light: 'light' };
 // Yes this is dumb, but it's an easy way to handle this.
-const jobModalKey = 'seenJobModal2025'; // Change this to make the modal re-populate
-const lookingForJob = false && !window.localStorage.getItem(jobModalKey);
+const jobModalKey = 'seenJobModal2025v2'; // Change this to make the modal re-populate
+const lookingForJob = true && !window.localStorage.getItem(jobModalKey);
 
 // Set the current color mode to the default display mode
 let currentColorMode = window.matchMedia('(prefers-color-scheme: dark)').matches

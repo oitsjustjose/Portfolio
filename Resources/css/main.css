@@ -160,3 +160,13 @@ body.dark .btn-close {
     width: 100%;
   }
 }
+
+.cards.grid {
+  grid-auto-rows: unset !important;
+}
+
+.cards.grid.singular {
+  grid-template-columns: repeat(1, minmax(256px, 1fr)) !important;
+  max-width: 50%;
+  margin: 0 auto;
+}
