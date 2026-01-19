@@ -1,5 +1,3 @@
-# About
+# This Repo has Moved!
 
-[Live Here](https://oitsjustjose.com/)
-
-A personal portfolio site made using Vanilla JS and [Bootstrap 5](https://v5.getbootstrap.com)
+This repository has been moved to a [new location!](https://git.oitsjustjose.com/me/Portfolio)
